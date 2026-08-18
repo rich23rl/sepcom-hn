@@ -1,0 +1,444 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SEPCOM - Servicios Profesionales de Construcciones Múltiples</title>
+    <link rel="icon" type="image/svg+xml" href="images/SVG_iso_normal.svg" />
+    <link rel="apple-touch-icon" href="images/SVG_iso_normal.svg" />
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+  </head>
+
+  <body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+      <div class="container nav-container">
+        <div class="logo">
+          <img src="images/SVG_normal.svg" alt="SEPCOM" />
+        </div>
+        <ul class="nav-menu" id="navMenu">
+          <li><a href="#inicio" class="nav-link">Inicio</a></li>
+          <li><a href="#nosotros" class="nav-link">Nosotros</a></li>
+          <li><a href="#servicios" class="nav-link">Servicios</a></li>
+          <li><a href="#proyectos" class="nav-link">Proyectos</a></li>
+          <li><a href="#contacto" class="nav-link">Contacto</a></li>
+        </ul>
+        <div class="hamburger" id="hamburger">
+          <span></span><span></span><span></span>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="hero">
+      <div class="hero-overlay"></div>
+      <div class="hero-content">
+        <h1 class="hero-title">Construyendo el Futuro de Honduras</h1>
+        <p class="hero-subtitle">
+          Soluciones integrales en construcción y electrificación
+        </p>
+        <div class="hero-buttons">
+          <a href="#servicios" class="btn btn-primary">Nuestros Servicios</a>
+          <a href="#contacto" class="btn btn-outline">Contáctanos</a>
+        </div>
+      </div>
+
+      <div class="hero-stats">
+        <div class="hero-stat-item">
+          <div class="stat-number" data-target="15">0</div>
+          <div class="stat-label">Años de Experiencia</div>
+        </div>
+        <div class="hero-stat-divider"></div>
+        <div class="hero-stat-item">
+          <div class="stat-number" data-target="200">0</div>
+          <div class="stat-label">Proyectos Completados</div>
+        </div>
+        <div class="hero-stat-divider"></div>
+        <div class="hero-stat-item">
+          <div class="stat-number" data-target="100">0</div>
+          <div class="stat-label">Clientes Satisfechos</div>
+        </div>
+      </div>
+
+      <a href="#nosotros" class="scroll-indicator">
+        <i class="fas fa-chevron-down"></i>
+      </a>
+    </section>
+
+    <!-- About Section -->
+    <section id="nosotros" class="about">
+      <div class="container">
+        <div class="section-header animate-on-scroll">
+          <h2 class="section-title">Sobre Nosotros</h2>
+          <div class="title-underline"></div>
+        </div>
+        <div class="about-content">
+          <div class="about-hero animate-on-scroll">
+            <img
+              src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=1200"
+              alt="Construcción SEPCOM"
+            />
+            <div class="about-hero-overlay">
+              <div class="about-hero-content">
+                <h3>Experiencia y Compromiso</h3>
+                <p class="about-description">
+                  Somos una empresa comprometida con el desarrollo de soluciones
+                  integrales en electrificación, construcción y comercialización
+                  de materiales eléctricos y de construcción. Nuestra
+                  experiencia nos ha permitido posicionarnos como una opción
+                  confiable para proyectos de diversas escalas.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="mission-vision">
+            <div class="mv-item animate-on-scroll">
+              <h3><i class="fas fa-bullseye"></i> Misión</h3>
+              <p>
+                Brindar soluciones en electrificación y construcción,
+                promoviendo el desarrollo sostenible y creando valor para
+                nuestros clientes a través de un servicio personalizado,
+                eficiente y comprometido con la excelencia.
+              </p>
+            </div>
+            <div class="mv-item animate-on-scroll">
+              <h3><i class="fas fa-eye"></i> Visión</h3>
+              <p>
+                Ser competitivos en el sector de la construcción y
+                electrificación, reconocidos por nuestra confiabilidad, calidad,
+                profesionalismo y compromiso con la satisfacción del cliente.
+              </p>
+            </div>
+          </div>
+
+          <div class="values animate-on-scroll">
+            <h3>Nuestros Valores</h3>
+            <div class="values-grid">
+              <div class="value-item">
+                <i class="fas fa-award"></i><span>Calidad</span>
+              </div>
+              <div class="value-item">
+                <i class="fas fa-handshake"></i><span>Responsabilidad</span>
+              </div>
+              <div class="value-item">
+                <i class="fas fa-lightbulb"></i><span>Innovación</span>
+              </div>
+              <div class="value-item">
+                <i class="fas fa-users"></i><span>Trabajo en Equipo</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="servicios" class="services">
+      <div class="container">
+        <div class="section-header animate-on-scroll">
+          <h2 class="section-title">Nuestros Servicios</h2>
+          <div class="title-underline"></div>
+          <p class="section-subtitle">
+            Soluciones profesionales adaptadas a tus necesidades
+          </p>
+        </div>
+        <div class="services-grid">
+          <div class="service-card animate-on-scroll">
+            <div class="service-icon"><i class="fas fa-bolt"></i></div>
+            <h3>Electrificación</h3>
+            <p>
+              Diseño, instalación y mantenimiento de sistemas eléctricos con los
+              más altos estándares de calidad y seguridad.
+            </p>
+            <ul class="service-features">
+              <li>Diseño de sistemas eléctricos</li>
+              <li>Instalación profesional</li>
+              <li>Mantenimiento preventivo</li>
+              <li>Electrificación voz y datos</li>
+            </ul>
+          </div>
+          <div class="service-card animate-on-scroll">
+            <div class="service-icon"><i class="fas fa-hard-hat"></i></div>
+            <h3>Construcción General</h3>
+            <p>
+              Ejecutamos proyectos de construcción residencial, comercial e
+              industrial con los más altos estándares de calidad en Honduras.
+            </p>
+            <ul class="service-features">
+              <li>Proyectos residenciales</li>
+              <li>Construcción comercial</li>
+              <li>Obras de infraestructura</li>
+              <li>Pintura</li>
+            </ul>
+          </div>
+          <div class="service-card animate-on-scroll">
+            <div class="service-icon">
+              <i class="fas fa-clipboard-check"></i>
+            </div>
+            <h3>Asesoría y Supervisión</h3>
+            <p>
+              Consultoría especializada y supervisión técnica de proyectos
+              constructivos y eléctricos.
+            </p>
+            <ul class="service-features">
+              <li>Consultoría técnica</li>
+              <li>Supervisión de proyectos</li>
+              <li>Control de calidad</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="proyectos" class="projects">
+      <div class="container">
+        <div class="section-header animate-on-scroll">
+          <h2 class="section-title">Proyectos Realizados</h2>
+          <div class="title-underline"></div>
+          <p class="section-subtitle">
+            Experiencia comprobada en proyectos de alto nivel
+          </p>
+        </div>
+        <div class="projects-grid">
+          <div class="project-card animate-on-scroll">
+            <div class="project-image">
+              <img
+                src="images/WhatsApp Image 2026-02-28 at 8.10.00 PM.jpeg"
+                alt="Hotel"
+              />
+              <div class="project-overlay">
+                <h4>Kimpton Gran Roatan Resort and Spa</h4>
+              </div>
+            </div>
+            <div class="project-info">
+              <h3>Sistema de Iluminación Paisajista</h3>
+            </div>
+          </div>
+
+          <div class="project-card animate-on-scroll">
+            <div class="project-image">
+              <img
+                src="images/WhatsApp Image 2026-02-28 at 8.39.48 PM.jpeg"
+                alt="Torre"
+              />
+              <div class="project-overlay">
+                <h4>Torre de Condominio Arihini, Roatán</h4>
+              </div>
+            </div>
+            <div class="project-info">
+              <h3>Instalaciones Eléctricas en Condominios</h3>
+            </div>
+          </div>
+
+          <div class="project-card animate-on-scroll">
+            <div class="project-image">
+              <img
+                src="images/WhatsApp Image 2026-03-10 at 10.42.24 AM.jpeg"
+                style="object-position: center 40%"
+                alt="Eductrade"
+              />
+              <div class="project-overlay"><h4>Eductrade</h4></div>
+            </div>
+            <div class="project-info">
+              <h3>
+                Sistema Eléctrico de Alta y Media Tensión Provisonal y
+                Permanente
+              </h3>
+            </div>
+          </div>
+
+          <div class="project-card animate-on-scroll">
+            <div class="project-image">
+              <img
+                src="images/WhatsApp Image 2026-02-28 at 8.04.22 PM.jpeg"
+                alt="DPI Kennedy"
+              />
+              <div class="project-overlay"><h4>DPI Kennedy</h4></div>
+            </div>
+            <div class="project-info"><h3>Soldadura y Pintura</h3></div>
+          </div>
+
+          <div class="project-card animate-on-scroll">
+            <div class="project-image">
+              <img
+                src="images/WhatsApp Image 2026-03-10 at 10.03.12 AM.jpeg"
+                style="object-position: center 20%"
+                alt="Roatan"
+              />
+              <div class="project-overlay"><h4>Roatán</h4></div>
+            </div>
+            <div class="project-info"><h3>Instalación de Balizas</h3></div>
+          </div>
+
+          <div class="project-card animate-on-scroll">
+            <div class="project-image">
+              <img
+                src="images/WhatsApp Image 2026-03-10 at 10.05.57 AM.jpeg"
+                style="object-position: center 30%"
+                alt="Hotel Clarion ventanales"
+              />
+              <div class="project-overlay"><h4>Hotel Clarion</h4></div>
+            </div>
+            <div class="project-info"><h3>Limpieza de Ventanales</h3></div>
+          </div>
+
+          <div class="project-card animate-on-scroll">
+            <div class="project-image">
+              <img
+                src="images/WhatsApp Image 2026-03-10 at 9.58.10 AM.jpeg"
+                style="object-position: center 10%"
+                alt="Hotel Clarion pintura"
+              />
+              <div class="project-overlay"><h4>Hotel Clarion</h4></div>
+            </div>
+            <div class="project-info"><h3>Pintura de Fachada</h3></div>
+          </div>
+
+          <div class="project-card animate-on-scroll">
+            <div class="project-image">
+              <img
+                src="images/WhatsApp Image 2026-03-10 at 10.38.28 AM.jpeg"
+                style="object-position: center 10%"
+                alt="Mall Cascadas"
+              />
+              <div class="project-overlay">
+                <h4>Mall Cascadas - Food Court</h4>
+              </div>
+            </div>
+            <div class="project-info"><h3>Subcontrato Eléctrico</h3></div>
+          </div>
+
+          <div class="project-card animate-on-scroll">
+            <div class="project-image">
+              <img
+                src="images/WhatsApp Image 2026-02-28 at 8.43.33 PM.jpeg"
+                style="object-position: center 40%"
+                alt="Valle de Angeles"
+              />
+              <div class="project-overlay"><h4>Valle de Ángeles</h4></div>
+            </div>
+            <div class="project-info">
+              <h3>Construcción y Electrificación Residencial</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Team Section -->
+    <section class="team">
+      <div class="container">
+        <div class="section-header animate-on-scroll">
+          <h2 class="section-title">Nuestro Equipo</h2>
+          <div class="title-underline"></div>
+        </div>
+        <div class="team-content animate-on-scroll">
+          <p>
+            Nuestro equipo está conformado por profesionales altamente
+            capacitados en las áreas de construcción, electricidad y supervisión
+            de proyectos, trabajando con dedicación para garantizar el éxito de
+            cada obra.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contacto" class="contact">
+      <div class="container">
+        <div class="section-header animate-on-scroll">
+          <h2 class="section-title">Contáctanos</h2>
+          <div class="title-underline"></div>
+          <p class="section-subtitle">
+            Estamos listos para tu próximo proyecto
+          </p>
+        </div>
+        <div class="contact-content">
+          <div class="contact-info">
+            <div class="office animate-on-scroll">
+              <h3><i class="fas fa-building"></i> Oficina Principal</h3>
+              <p>
+                <i class="fas fa-map-marker-alt"></i> Col. Alameda, edificio
+                corporativo 2do nivel oficina 201, contiguo a Hotel Clarion,
+                Tegucigalpa, Honduras
+              </p>
+              <p><i class="fas fa-phone"></i> +504 3162-0885</p>
+              <p><i class="fas fa-envelope"></i> proyectos@sepcom.hn</p>
+              <p><i class="fas fa-envelope"></i> sepcomhn@gmail.com</p>
+            </div>
+          </div>
+          <div class="contact-whatsapp animate-on-scroll">
+            <div class="whatsapp-box">
+              <div class="whatsapp-icon-big">
+                <i class="fab fa-whatsapp"></i>
+              </div>
+              <h3>¿Tienes un proyecto?</h3>
+              <p>
+                Escríbenos directamente por WhatsApp y te respondemos a la
+                brevedad posible.
+              </p>
+              <a
+                href="https://wa.me/50431620885?text=Hola%20SEPCOM,%20me%20interesa%20solicitar%20información%20sobre%20sus%20servicios."
+                class="btn-whatsapp-cta"
+                target="_blank"
+              >
+                <i class="fab fa-whatsapp"></i> Iniciar Conversación
+              </a>
+              <div class="whatsapp-info"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- WhatsApp Floating Button -->
+    <a
+      href="https://wa.me/50431620885?text=Hola%20SEPCOM,%20me%20interesa%20solicitar%20información%20sobre%20sus%20servicios."
+      class="whatsapp-float"
+      target="_blank"
+      aria-label="WhatsApp"
+    >
+      <i class="fab fa-whatsapp"></i>
+      <span class="whatsapp-tooltip">¡Escríbenos!</span>
+    </a>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-col">
+            <h4>SEPCOM</h4>
+            <p>Servicios Profesionales de Construcciones Múltiples S de R.L.</p>
+            <p>Desde 2010 construyendo el futuro de Honduras</p>
+          </div>
+          <div class="footer-col">
+            <h4>Enlaces Rápidos</h4>
+            <ul>
+              <li><a href="#inicio">Inicio</a></li>
+              <li><a href="#nosotros">Nosotros</a></li>
+              <li><a href="#servicios">Servicios</a></li>
+              <li><a href="#proyectos">Proyectos</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Contacto</h4>
+            <p><i class="fas fa-phone"></i> +504 3162-0885</p>
+            <p><i class="fas fa-envelope"></i> proyectos@sepcom.hn</p>
+            <p><i class="fas fa-envelope"></i> sepcomhn@gmail.com</p>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2026 SEPCOM. Todos los derechos reservados, Honduras.</p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
