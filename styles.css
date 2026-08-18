@@ -119,10 +119,7 @@ body {
 .hero {
   height: 100vh;
   min-height: 600px;
-  background:
-    linear-gradient(135deg, rgba(26, 77, 143, 0.92), rgba(37, 99, 235, 0.85)),
-    url("https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=1600")
-      center/cover no-repeat;
+  background: var(--primary-color);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -133,10 +130,35 @@ body {
   overflow: hidden;
 }
 
+/* Capa de imagen de fondo: es la unica que se desplaza con el parallax,
+   de modo que el hero nunca invade la seccion siguiente. */
+.hero::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: -15%;
+  height: 130%;
+  background: url("https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=1600")
+    center/cover no-repeat;
+  transform: translateY(var(--parallax-offset, 0px));
+  will-change: transform;
+  z-index: 0;
+}
+
 .hero-overlay {
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.25);
+  z-index: 1;
+  background:
+    linear-gradient(135deg, rgba(26, 77, 143, 0.92), rgba(37, 99, 235, 0.85)),
+    rgba(0, 0, 0, 0.25);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero::before {
+    transform: none;
+  }
 }
 
 .hero-content {

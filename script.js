@@ -53,7 +53,6 @@ document.querySelectorAll(".animate-on-scroll").forEach((el) => {
 });
 
 // ===== Counter Animation =====
-// ===== Counter Animation =====
 function animateCounter(element) {
   const target = parseInt(element.getAttribute("data-target"));
   const duration = 2000;
@@ -72,30 +71,23 @@ function animateCounter(element) {
   updateCounter();
 }
 
-// Inicia contadores automáticamente cuando carga la página
-window.addEventListener("load", () => {
-  document.querySelectorAll(".stat-number").forEach((el) => {
-    animateCounter(el);
-  });
-});
-
-// Observe stat numbers for counter animation
+// Inicia cada contador una sola vez, cuando su tarjeta entra en pantalla
 const statObserver = new IntersectionObserver(
   (entries) => {
     entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        const statNumber = entry.target.querySelector(".stat-number");
-        if (statNumber && !statNumber.classList.contains("counted")) {
-          animateCounter(statNumber);
-          statNumber.classList.add("counted");
-        }
+      if (!entry.isIntersecting) return;
+      const statNumber = entry.target.querySelector(".stat-number");
+      if (statNumber && !statNumber.classList.contains("counted")) {
+        statNumber.classList.add("counted");
+        animateCounter(statNumber);
       }
+      statObserver.unobserve(entry.target);
     });
   },
   { threshold: 0.5 },
 );
 
-document.querySelectorAll(".stat-item").forEach((stat) => {
+document.querySelectorAll(".hero-stat-item").forEach((stat) => {
   statObserver.observe(stat);
 });
 
@@ -112,29 +104,6 @@ document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
       });
     }
   });
-});
-
-// ===== Form Submission =====
-const contactForm = document.getElementById("contactForm");
-
-contactForm.addEventListener("submit", (e) => {
-  e.preventDefault();
-
-  // Get form values
-  const name = document.getElementById("name").value;
-  const email = document.getElementById("email").value;
-  const phone = document.getElementById("phone").value;
-  const message = document.getElementById("message").value;
-
-  // Here you would typically send the data to a server
-  // For now, we'll just show an alert
-  alert(
-    "¡Gracias por contactarnos! Nos pondremos en contacto contigo pronto.\n\nNombre: " +
-      name,
-  );
-
-  // Reset form
-  contactForm.reset();
 });
 
 // ===== Active Nav Link on Scroll =====
@@ -159,13 +128,27 @@ window.addEventListener("scroll", () => {
 });
 
 // ===== Parallax Effect on Hero =====
-window.addEventListener("scroll", () => {
+// Solo se desplaza la capa de imagen (.hero::before) via --parallax-offset.
+// Mover el .hero completo lo hacia invadir la seccion siguiente al hacer scroll.
+const hero = document.querySelector(".hero");
+let parallaxTicking = false;
+
+function updateParallax() {
+  parallaxTicking = false;
   const scrolled = window.pageYOffset;
-  const hero = document.querySelector(".hero");
-  if (hero) {
-    hero.style.transform = `translateY(${scrolled * 0.5}px)`;
-  }
-});
+  // Fuera del hero no hace falta seguir calculando.
+  if (scrolled > hero.offsetHeight) return;
+  hero.style.setProperty("--parallax-offset", scrolled * 0.3 + "px");
+}
+
+if (hero) {
+  window.addEventListener("scroll", () => {
+    if (!parallaxTicking) {
+      parallaxTicking = true;
+      requestAnimationFrame(updateParallax);
+    }
+  });
+}
 
 // ===== Loading Animation =====
 window.addEventListener("load", () => {
