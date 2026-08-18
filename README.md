@@ -1,4 +1,4 @@
-# SEPCOM — Sitio Web
+# SEPCOM —Sitio Web
 
 Landing page de **SEPCOM** (Servicios Profesionales de Construcciones Múltiples S de R.L.), empresa hondureña de electrificación, construcción y comercialización de materiales, con sede en Tegucigalpa.
 
